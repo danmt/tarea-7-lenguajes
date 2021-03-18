@@ -7,7 +7,9 @@
 
 ## Ejercicio 0
 
-Implementamos la funcion Circulo que recibe un numero `radio`, dado que Javascript no es fuertemente tipado debemos hacer el chequeo de tipos manualmente. Para la funcion area, usamos el concepto de prototipos de Javascript para simular los metodos de una instancia.
+### Circulo
+
+Implementamos la funcion `Circulo` que recibe un numero `radio`, dado que Javascript no es fuertemente tipado debemos hacer el chequeo de tipos manualmente. Para la funcion area, usamos el concepto de prototipos de Javascript para simular los metodos de una instancia.
 
 ```javascript
 function Circulo(radio) {
@@ -25,6 +27,10 @@ Circulo.prototype = {
 };
 ```
 
+### Cilindro
+
+Al igual que con la funcion `Circulo` debemos verificar el tipo de altura y que sea un valor positivo. Usamos el metodo create y assign para generar un nuevo objeto que tenga el prototipo de circulo e incluya los valores adicionales de `Cilindro`. De esta manera simulamos la herencia de lenguajes orientados a objetos.
+
 ```javascript
 function Cilindro(radio, altura) {
   if (typeof altura !== "number" || altura < 0) {
@@ -41,5 +47,3 @@ function Cilindro(radio, altura) {
   );
 }
 ```
-
-Al igual que con la funcion `Circulo` debemos verificar el tipo de altura y que sea un valor positivo. Usamos el metodo create y assign para generar un nuevo objeto que tenga el prototipo de circulo e incluya los valores adicionales de `Cilindro`.
